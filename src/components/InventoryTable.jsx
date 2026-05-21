@@ -2,9 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { 
-  HiOutlineMagnifyingGlass, 
-  HiOutlineAdjustmentsVertical, 
-  HiOutlinePencilSquare, 
+  HiOutlineMagnifyingGlass,
+  HiOutlineAdjustmentsVertical,
   HiOutlineTrash,
   HiOutlinePlus 
 } from 'react-icons/hi2';

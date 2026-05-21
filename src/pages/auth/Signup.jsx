@@ -39,7 +39,7 @@ const SignUp = () => {
     setMessage('');
 
     try {
-      const { data: authData, error: authError } = await supabase.auth.signUp({
+      const { error: authError } = await supabase.auth.signUp({
         email: formData.email,
         password: formData.password,
         options: {
@@ -52,7 +52,7 @@ const SignUp = () => {
 
       if (authError) throw authError;
 
-      const { data: userData, error: userError } = await supabase
+      const { error: userError } = await supabase
         .from('users')
         .insert([{ name: formData.fullName, email: formData.email, role: role }]);
 
@@ -67,7 +67,7 @@ const SignUp = () => {
     } catch (error) {
       setMessage(error.message);
     } finally {
-      setLoading(false);u  
+      setLoading(false);
     }
   };
 
