@@ -67,7 +67,7 @@ const SignUp = () => {
     } catch (error) {
       setMessage(error.message);
     } finally {
-      setLoading(false);
+      setLoading(false);u  
     }
   };
 

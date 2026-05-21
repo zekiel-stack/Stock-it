@@ -20,10 +20,10 @@ const SignIn = () => {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [animate, setAnimate] = useState(false); // Animation trigger
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    // Trigger the slide-in animation on mount
+  
     const timer = setTimeout(() => setAnimate(true), 50);
     return () => clearTimeout(timer);
   }, []);

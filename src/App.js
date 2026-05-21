@@ -9,6 +9,7 @@ import SignIn from "./pages/auth/Signin";
 import AdminDashboard from './pages/admin/AdminDashboard'; 
 
 import WorkerDashboard from './pages/user/WorkerDashboard'; 
+import Authentication from './pages/email/Authentication';
 
 const App = () => {
   return (
@@ -30,7 +31,7 @@ const App = () => {
         {/* Worker Dashboard is correctly mapped to its new path */}
         <Route path="/worker" element={<WorkerDashboard />} />
 
-
+        <Route path="/authentication" element ={<Authentication/>} />
         
       </Routes>
     </Router>
