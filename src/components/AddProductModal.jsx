@@ -43,7 +43,7 @@ const AddProductModal = ({ isOpen, onClose, onProductAdded }) => {
     e.preventDefault();
     setLoading(true);
 
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('inventory_items')
       .insert([
         {

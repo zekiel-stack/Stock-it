@@ -10,14 +10,15 @@ const useOnScreen = (options) => {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
+    const node = ref.current;
     const observer = new IntersectionObserver(([entry]) => {
       setIntersecting(entry.isIntersecting);
     }, options);
 
-    if (ref.current) observer.observe(ref.current);
+    if (node) observer.observe(node);
 
     return () => {
-      if (ref.current) observer.unobserve(ref.current);
+      if (node) observer.unobserve(node);
     };
   }, [options]);
 
